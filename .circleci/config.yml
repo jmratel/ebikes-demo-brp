@@ -12,9 +12,14 @@ jobs:
       # - sfdx/auth:
       #     defaultusername: cicd@brp.com.devcoe
       #     instanceUrl: https://brp--devcoe.sandbox.my.salesforce.com/
+
+
+#       sfdx auth:jwt:grant --clientid $SFDX_CONSUMER_KEY \
+# --jwtkeyfile ./server.key --username cicd@brp.com.devcoe  \
+# --setdefaultdevhubusername --setalias ${CIRCLE_PROJECT_REPONAME}-${CIRCLE_BRANCH}
       - run:
           name: Other auth not working?
-          command: sfdx force:auth:jwt:grant -i $SFDX_CONSUMER_KEY -f ./server.key -u cicd@brp.com.devcoe -s -a ${CIRCLE_PROJECT_REPONAME}-${CIRCLE_BRANCH} -r https://brp--devcoe.sandbox.my.salesforce.com/
+          command: sfdx force:auth:jwt:grant -i 3MVG98EE59.VIHmxTt2OJwaVPnFtHSOuBwltawrlN5MDs2dK2XTJMlqapT1.0sL6DPYySEb7FHmfTJXD4JLrC -f ./server.key -u cicd@brp.com.devcoe -s -a test-jwt -r https://brp--devcoe.sandbox.my.salesforce.com/
       - run:
           name: Run your SFDX commands here
           command: |
