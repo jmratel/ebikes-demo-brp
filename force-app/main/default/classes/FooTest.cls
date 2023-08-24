@@ -3,6 +3,6 @@ private class FooTest{
 	@IsTest
 	static void isTrue(){
 		///////////////
-		Assert.areEqual(true, Foo.getTrue());
+		Assert.areEqual(false, Foo.getTrue());
 	}
 }
