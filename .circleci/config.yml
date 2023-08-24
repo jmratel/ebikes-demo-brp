@@ -10,7 +10,7 @@ jobs:
       - checkout
       - sfdx/install
       - sfdx/auth:
-          defaultusername: cicd@brp.com.devcoe
+          defaultusername: julien.masson-ratel@brp.com.devcoe
           instanceUrl: https://brp--devcoe.sandbox.my.salesforce.com/
 
 
