@@ -9,17 +9,17 @@ jobs:
     steps:
       - checkout
       - sfdx/install
-      # - sfdx/auth:
-      #     defaultusername: julien.masson-ratel@brp.com.devcoe
-      #     instanceUrl: https://brp--devcoe.sandbox.my.salesforce.com/
+      - sfdx/auth:
+          defaultusername: cicd@brp.com.devcoe
+          instanceUrl: https://test.salesforce.com
 
 
 #       sfdx auth:jwt:grant --clientid $SFDX_CONSUMER_KEY \
 # --jwtkeyfile ./server.key --username cicd@brp.com.devcoe  \
 # --setdefaultdevhubusername --setalias ${CIRCLE_PROJECT_REPONAME}-${CIRCLE_BRANCH}
-      - run:
-          name: Other auth not working?
-          command: sfdx auth:jwt:grant --clientid 3MVG98EE59.VIHmxTt2OJwaVPnFtHSOuBwltawrlN5MDs2dK2XTJMlqapT1.0sL6DPYySEb7FHmfTJXD4JLrC --jwtkeyfile ./server.key --username julien.masson-ratel@brp.com.devcoe --instanceurl https://test.salesforce.com --setdefaultdevhubusername --setalias COE
+      # - run:
+      #     name: Other auth not working?
+      #     command: sfdx auth:jwt:grant --clientid 3MVG98EE59.VIHmxTt2OJwaVPnFtHSOuBwltawrlN5MDs2dK2XTJMlqapT1.0sL6DPYySEb7FHmfTJXD4JLrC --jwtkeyfile ./server.key --username julien.masson-ratel@brp.com.devcoe --instanceurl https://test.salesforce.com --setdefaultdevhubusername --setalias COE
       - run:
           name: Run your SFDX commands here
           command: |
