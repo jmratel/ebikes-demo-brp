@@ -9,9 +9,12 @@ jobs:
     steps:
       - checkout
       - sfdx/install
-      - sfdx/auth:
-          defaultusername: cicd@brp.com.devcoe
-          instanceUrl: https://brp--devcoe.sandbox.my.salesforce.com/
+      # - sfdx/auth:
+      #     defaultusername: cicd@brp.com.devcoe
+      #     instanceUrl: https://brp--devcoe.sandbox.my.salesforce.com/
+      - run:
+          name: Other auth not working?
+          command: sfdx force:auth:jwt:grant -i $SFDX_CONSUMER_KEY -f ./server.key -u cicd@brp.com.devcoe -s -a ${CIRCLE_PROJECT_REPONAME}-${CIRCLE_BRANCH} -r https://brp--devcoe.sandbox.my.salesforce.com/
       - run:
           name: Run your SFDX commands here
           command: |
