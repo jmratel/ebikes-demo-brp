@@ -11,6 +11,7 @@ jobs:
       - sfdx/install
       - sfdx/auth:
           defaultusername: cicd@brp.com.devcoe
+          instanceUrl: https://brp--devcoe.sandbox.my.salesforce.com/
       - run:
           name: Run your SFDX commands here
           command: |
