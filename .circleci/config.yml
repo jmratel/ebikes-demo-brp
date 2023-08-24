@@ -1,8 +1,9 @@
 version: 2.1
 orbs:
-  apex: circleci/salesforce-apex@2.2.0
+  sfdx: circleci/salesforce-sfdx@2.2.0
 jobs:
   install_authenticate:
+    executor: sfdx/default
     docker:
       - image: cimg/node:14.5
     steps:
