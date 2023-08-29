@@ -22,6 +22,8 @@ jobs:
             python ./scripts/cicd/parse_package_for_tests.py $PACKAGE > ./tests.txt
             cat ./tests.txt
             export TEST_CLASSES=$(cat ./tests.txt)
+            echo << pipeline.git.branch >>
+            echo << pipeline.trigger_source >>
 
   install_authenticate:
     executor: sfdx/default
