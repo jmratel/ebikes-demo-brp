@@ -17,7 +17,7 @@ jobs:
           command: |
             ls -a
             python ./scripts/cicd/find_folder.py ${CIRCLE_BRANCH} > ./package.txt
-            echo ./package.txt
+            cat ./package.txt
 
   install_authenticate:
     executor: sfdx/default
