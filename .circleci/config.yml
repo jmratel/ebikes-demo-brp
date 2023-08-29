@@ -8,10 +8,10 @@ jobs:
     executor: python/default
     steps:
       - checkout
-      - python/install-packages:
-          app-dir: .
-          args: lxml
-          pkg-manager: pip
+      # - python/install-packages:
+      #     app-dir: .
+      #     args: lxml
+      #     pkg-manager: pip
       - run:
           name: Find folder and package.xml based on branch name
           command: |
