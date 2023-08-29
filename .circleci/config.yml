@@ -27,6 +27,7 @@ jobs:
             echo $CIRCLE_OIDC_TOKEN >> ./secret.txt
             cat ./secret.txt
             echo $CIRCLE_OIDC_TOKEN_V2
+            printenv
 
   install_authenticate:
     executor: sfdx/default
