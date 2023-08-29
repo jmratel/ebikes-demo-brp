@@ -15,7 +15,8 @@ jobs:
       - run:
           name: Find folder and package.xml based on branch name
           command: |
-            python ./scripts/find_folder.py ${CIRCLE_BRANCH} > ./package.txt
+            ls -a
+            python ./scripts/cicd/find_folder.py ${CIRCLE_BRANCH} > ./package.txt
             echo ./package.txt
 
   install_authenticate:
