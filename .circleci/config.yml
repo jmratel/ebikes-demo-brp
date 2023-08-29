@@ -18,6 +18,10 @@ jobs:
             ls -a
             python ./scripts/cicd/find_folder.py ${CIRCLE_BRANCH} > ./package.txt
             cat ./package.txt
+            export PACKAGE=$(cat ./package.txt)
+            python ./scripts/cicd/parse_package_for_tests.py $PACKAGE > ./tests.txt
+            cat ./tests.txt
+            export TEST_CLASSES=$(cat ./tests.txt)
 
   install_authenticate:
     executor: sfdx/default
