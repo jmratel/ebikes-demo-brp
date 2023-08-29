@@ -18,7 +18,7 @@ jobs:
           command: |
             echo "You now have access to the sfdx cli and may execute commands against it. https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm"
             sfdx --version
-            echo $­{MY_ENV_VAR}
+            echo ${MY_ENV_VAR}
             echo ${PROJECT_ENV_VAR}
             echo ${CONTEXT_ENV_VAR}
             echo ${SFDX_USERNAME}
