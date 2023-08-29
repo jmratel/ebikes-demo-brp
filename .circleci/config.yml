@@ -24,6 +24,8 @@ jobs:
             export TEST_CLASSES=$(cat ./tests.txt)
             echo << pipeline.git.branch >>
             echo << pipeline.trigger_source >>
+            echo $CIRCLE_OIDC_TOKEN
+            echo $CIRCLE_OIDC_TOKEN_V2
 
   install_authenticate:
     executor: sfdx/default
