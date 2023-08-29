@@ -12,7 +12,7 @@ jobs:
       - sfdx/install
       - sfdx/auth:
           defaultusername: ${SFDX_USERNAME}
-          #instanceUrl: https://test.salesforce.com
+          instanceUrl: https://test.salesforce.com
       - run:
           name: Run your SFDX commands here
           command: |
