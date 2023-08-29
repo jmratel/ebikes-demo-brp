@@ -21,6 +21,7 @@ jobs:
             echo $­{MY_ENV_VAR}
             echo ${PROJECT_ENV_VAR}
             echo ${CONTEXT_ENV_VAR}
+            echo ${SFDX_USERNAME}
       - run:
           name: Check Auth List
           command: sfdx force:auth:list
