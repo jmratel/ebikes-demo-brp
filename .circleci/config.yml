@@ -54,7 +54,7 @@ jobs:
           command: sfdx force:auth:list
       - run:
           name: Deploy check only demo
-          command: export JOB_ID=sfdx force:source:deploy -x ./manifest/package.xml -l RunSpecifiedTests -r FooTest -c -u ${SFDX_USERNAME} -w 0
+          command: export JOB_ID=$(sfdx force:source:deploy -x ./manifest/package.xml -l RunSpecifiedTests -r FooTest -c -u ${SFDX_USERNAME} -w 0)
             echo ${JOB_ID}
 
 workflows:
