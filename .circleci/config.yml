@@ -58,8 +58,8 @@ jobs:
           command: |
             export JOB_ID=$(sfdx force:source:deploy -x ./manifest/demo-branch/package2.xml -l RunSpecifiedTests -r FooTest -c -u ${SFDX_USERNAME} -w 0 --json)
             echo ${JOB_ID}
+            JOB_ID=$(./scripts/cicd/get_job_id ${JOB_ID})
             sleep 30
-            JOB_ID=$(./get_job_id ${JOB_ID})
             sfdx force:source:deploy:report -i ${JOB_ID}
 
 workflows:
