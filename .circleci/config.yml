@@ -56,7 +56,7 @@ jobs:
       - run:
           name: Deploy check only demo
           command: |
-            export JOB_ID=$(sfdx force:source:deploy -x ./manifest/demo-branch/package2.xml -l RunSpecifiedTests -r FooTest -c -u ${SFDX_USERNAME} -w 0)
+            export JOB_ID=$(sfdx force:source:deploy -x ./manifest/demo-branch/package2.xml -l RunSpecifiedTests -r FooTest -c -u ${SFDX_USERNAME} -w 0 --json)
             echo ${JOB_ID}
             sleep 30
             sfdx force:source:deploy:report -i ${JOB_ID}
